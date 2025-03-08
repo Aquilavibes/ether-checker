@@ -1,19 +1,41 @@
 <template>
-<header class="text-white ml-[90px] text-[25px]"> $Ether-Check</header>
-
-    <div class="justify-center flex mt-[50px] gap-5">
-<h1 class="text-[50px] text-white mr-[400px] absolute font-mono">Check how broke or rich<br> someone is with just the<br> ETH Address</h1>
-
-<img src="/eth.png" alt='ethereum image' class="h-[850px] w-[8500px] relative ml-[250px] -mt-[100px]" />
-
+    <CryptoWidget />
+  <div class="min-h-screen text-white flex flex-col items-center justify-center px-6">
+    <!-- Header -->
+    <header class="text-3xl font-bold mb-[80px] top-[100px] absolute">$Ether-Check</header>
+    
+    <!-- Content Wrapper -->
+    <div class="flex flex-col lg:flex-row items-center text-center lg:text-left">
+      <!-- Text Section -->
+      <div class="lg:w-1/2 mb-10 lg:mb-0">
+        <h1 class="text-4xl lg:text-5xl font-mono leading-snug">
+          Check how broke or rich <br /> someone is with just the <br /> ETH Address
+        </h1>
+        <p class="text-white/80 mt-4 text-lg">
+          Start having fun by monitoring people's address
+        </p>
+        <button class="mt-6 px-6 py-3 bg-gradient-to-r from-[#ea51c1] via-[#0B0C10] to-[#4B0082] text-white rounded-lg text-lg shadow-lg">
+          Start Checking
+        </button>
+      </div>
+      
+      <!-- Ethereum Image -->
+      <div class="lg:w-1/2 flex justify-center lg:ml-[60px]">
+        <img src="/eth.png" alt="Ethereum image" class="w-64 sm:w-80 lg:w-[900px] lg:h-[700px]"
+        
+        
+        
+        
+        />
+      </div>
     </div>
-<small class="text-white/80 text-[15px] absolute mt-[300px] top-10 left-[200px] "> start having fun by monitoring people's address </small>
-<button class="text-white bg-gradient-to-r from-[#001F3F] via-[#0B0C10] to-[#4B0082] w-[150px] h-[50px] absolute mt-[400px] top-10 left-[200px]">
-    Start Checking</button>
-
+  </div>
 </template>
 
+
+
 <script setup lang="ts">
-
+definePageMeta({
+    layout: 'default'
+})
 </script>
-
