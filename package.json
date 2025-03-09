@@ -10,10 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@moralisweb3/common-evm-utils": "^2.27.2",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "ethers": "^6.13.5",
+    "moralis": "^2.27.2",
     "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }

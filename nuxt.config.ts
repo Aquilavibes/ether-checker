@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
 
@@ -7,18 +6,17 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-sharedPrerenderData: false,
-compileTemplate: true,
-resetAsyncDataToUndefined: true,
-templateUtils: true,
-relativeWatchPaths: true,
+    sharedPrerenderData: false,
+    compileTemplate: true,
+    resetAsyncDataToUndefined: true,
+    templateUtils: true,
+    relativeWatchPaths: true,
 
-defaults: {
-  useAsyncData: {
-
-    deep: true,
-  },
-},
+    defaults: {
+      useAsyncData: {
+        deep: true,
+      },
+    },
   },
 
   unhead: {
@@ -30,5 +28,9 @@ defaults: {
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
 
-  
+  vite: {
+    define: {
+      global: "window", // Fixes `global is not defined`
+    },
+  },
 });
